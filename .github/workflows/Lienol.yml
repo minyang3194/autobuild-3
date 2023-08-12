@@ -16,7 +16,7 @@ on:
       REPO_BRANCH:
         description: '（Lienol源码）请选择源码分支'
         required: true
-        default: '19.07'
+        default: '21.02'
         type: choice
         options:
           - '23.05'
@@ -85,8 +85,8 @@ on:
 
 
 # 定时触发开启开始编译(把下面两个#去掉开启,时间设置请看定时开启编译说明)
-#  schedule:
-#   - cron: 35 18 * * *
+  schedule:
+   - cron: 35 18 * * *
 
 env:
   GITHUB_LINK: https://github.com/${{github.repository}}
