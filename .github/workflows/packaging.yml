@@ -87,7 +87,7 @@ jobs:
 
     steps:    
     - name: 准备结束
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: 读取脚本设置
       run: |
@@ -144,7 +144,7 @@ jobs:
          
     - name: 上传固件在 github Artifacts
       if: steps.compile.outcome == 'success' && env.UPLOAD_FIRMWARE == 'true'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@main
       with:
         name: OpenWrt-${{ env.source_codename }}-${{ env.kernel_usage }}-${{ env.date }}-firmware
         path: ${{ env.FIRMWARE_PATH }}
